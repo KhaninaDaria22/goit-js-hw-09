@@ -6,7 +6,7 @@ let timerId = null;
 stopBtn.disabled = true;
 
 startBtn.addEventListener("click", startBtnHandler);
-stopBtn.addEventListener("clicK", stopBtnHandler);
+stopBtn.addEventListener("click", stopBtnHandler);
 
 
 function getRandomHexColor() {

@@ -17,6 +17,7 @@ img {
   max-width: 100%;
 }
 
-/* .timer {
-  display: ;
-} */
+.timer {
+  display: flex;
+  gap: 20;
+}
