@@ -11,7 +11,7 @@ function formSubmitHandler(e) {
   e.preventDefault();
   buttonEl.disabled = true;
 
-  const elements = e.currentTarget.element;
+  const elements = e.currentTarget.elements;
   const delay = elements.delay.value;
   const step = elements.step.value 
   const amount = elements.amount.value 
@@ -28,7 +28,7 @@ function formSubmitHandler(e) {
 
     promisesCount +=1;
 
-    if (promisesCount > Number(amout)) {
+    if (promisesCount > Number(amount)) {
       clearInterval(timerId);
       promisesCount =1 
       buttonEl.disabled = false;
@@ -47,7 +47,7 @@ function createPromise(position, delay) {
   const shouldResolve = Math.random() > 0.3;
 
   const element = formEl.elements;
-  const step = elements.step.value;
+  const step = element.step.value;
 
   let delayInMs = Number(delay) + step * (promisesCount - 1);
 
